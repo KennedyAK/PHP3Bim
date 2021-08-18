@@ -1,0 +1,10 @@
+.centraliza {
+    text-align: center;
+    margin: auto;
+    width: 450px;
+    color: aqua;
+}
+
+li {
+    list-style-type: none;
+}
