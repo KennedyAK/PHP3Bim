@@ -15,13 +15,47 @@
                     <th>Serie</th>
                     <th>Interesses</th>
                 </tr>
+
+                <?php
+                session_start();
+                if (isset($_SESSION['lista'])) {
+                    $carrega_lista = $_SESSION['lista'];
+                } else {
+                    $carrega_lista = array();
+                }
+                foreach ($carrega_lista as $pos):
+                ?>
+
                 <tr>
-                    <td>Antonio Kennedy</td>
-                    <td>13-06-13</td>
-                    <td>Masculino</td>
-                    <td>3° Ano</td>
-                    <td>Jogos, Seriados e Livros</td>
+                    <td>
+                        <?php
+                            print_r($pos[0]['nome']);
+                        ?>
+                    </td>
+                    <td>
+                    <?php
+                            print_r($pos[0]['data']);
+                        ?>
+                    </td>
+                    <td>
+                    <?php
+                            print_r($pos[0]['sexo']);
+                        ?>
+                    </td>
+                    <td> 
+                    <?php
+                            print_r($pos[0]['serie']);
+                        ?>
+                    </td>
+                    <td>
+                    <?php
+                          foreach($pos[0]['interesses'] as $item){
+                              echo "$item\n";
+                          }
+                        ?>
+                    </td>
                 </tr>
+                <?php endforeach;?>
             </table>
         </form>
     </center>
