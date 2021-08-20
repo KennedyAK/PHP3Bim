@@ -7,9 +7,9 @@
 
 <body>
     <center>
-        <fieldset class="centraliza">
-            <h3 class="centraliza">Exemplos de Revisão HTML com PHP</h3>
-            <ul>
+        <fieldset style="width: 600px;">
+            <h3>Exemplos de Revisão HTML com PHP</h3>
+            <ul  style="list-style-type: none;" >
                 <li><a href="cadastro.php">Usando formulario para Cadastro</a></li>
                 <li><a href="tabela.php">Visualizar os dados cadastrados</a></li>
             </ul>
