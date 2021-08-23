@@ -1,0 +1,112 @@
+body {
+    background-color: rgba(223, 219, 219, 0.8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.caixa {
+    margin: auto;
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgb(29, 16, 212);
+    padding: 30px;
+}
+
+.central_text {
+    text-align: center;
+}
+
+.grid_1_col {
+    display: grid;
+    margin: 20px;
+}
+
+.grid_2_col {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 20px;
+}
+
+.grid_2_col_P {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin: 20px;
+}
+
+.grid_4_col {
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #ea1f2d;
+    color: #ffffff;
+    text-shadow: #000000 5px 5px 15px;
+    font-size: 18px;
+}
+
+.button:hover {
+    padding: 11px;
+    cursor: pointer;
+    text-shadow: #ad4d4d 5px 5px 15px;
+}
+
+.button_B {
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+    width: 100px;
+    border-radius: 7px;
+    background-color: #ea1f2d;
+    color: #ffffff;
+    text-shadow: #000000 5px 5px 15px;
+    font-size: 18px;
+}
+
+.button_B:hover {
+    cursor: pointer;
+    text-shadow: #ad4d4d 5px 5px 15px;
+}
+
+.button_N {
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+    width: 70px;
+    height: 36px;
+    border-radius: 7px;
+    background-color: #c9c9c9;
+    color: #000000;
+    font-size: 14px;
+}
+
+.button_N:hover {
+    cursor: pointer;
+    text-shadow: #ffffff 5px 5px 15px;
+}
+
+table {
+    width: 100%;
+    height: auto;
+    border: 1px solid slategray;
+    margin-top: 10px;
+    background-color: white;
+}
+
+th {
+    background-color: rgb(38, 150, 255);
+    height: 30px;
+    color: white;
+    border: 1px solid rgb(29, 29, 29);
+}
+
+td {
+    border-right: 1px solid rgb(77, 77, 77);
+    border: 1px solid rgb(29, 29, 29);
+}
