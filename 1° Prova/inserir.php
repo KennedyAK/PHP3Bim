@@ -15,7 +15,7 @@
                 <div class="grid_1_col" style="margin: auto">
                     <label for="cpDocumento">
                         <strong>Insira os Dados</strong>
-                        <input style="width:120px" id="cpDocumento" name="cpDocumento">
+                        <input style="width:120px" id="cpDocumento[]" name="cpDocumento[]">
                     </label>
                 </div>
                 <div class="grid_1_col" style="margin: auto">
@@ -41,10 +41,56 @@
 </html>
 
 <?php
-if(isset ($_POST['botao']) && $_POST['botao'] == 'Cadastrar'){
-   echo"idont";
+
+if (isset($_POST['botao']) && $_POST['botao'] == 'Cadastrar') {
+
+    $list = [];
+    $regra1 = false;
+    $regra2 = false;
+    $regra3 = false;
+    $regra4 = false;
+    $regra5 = false;
+
+    foreach ($_POST['cpDocumento'] as $id => $conteudo) {
+
+        if (strlen($conteudo) == 5) {
+            $regra1 = 'true';
+            //echo "\n 1°: $regra1";
+            $list[0] = substr($conteudo, 0, 1);
+            $list[1] = substr($conteudo, 1, 1);
+            $list[2] = substr($conteudo, 2, 1);
+            $list[3] = substr($conteudo, 3, 1);
+            $list[4] = substr($conteudo, 4, 1);
+
+            if (pow($list[1], 4) % 3 == 0) {
+                $regra2 = 'true';
+                //echo "\n 2°: $regra2";
+            }
+
+            if ($list[2] != 0 && $list[2] != 1) {
+                $regra3 = 'true';
+               // echo "\n 3°: $regra3";
+            }
+            if ($list[2] + $list[4] > 3) {
+                $regra4 = 'true';
+                //echo "\n 4°: $regra4";
+            }
+            if ($list[0] == 2 or $list[0] == 5 or $list[0] == 9) {
+                $regra5 = 'true';
+               // echo "\n 5°: $regra5 \n";
+            }
+        } else {
+            echo 'erro';
+        }
+    }
+    //if ($regra1 == true && $regra2 == true && $regra3 == true && $regra4 == true && $regra5 == true) {
+        //echo "DEUUUUUUU CERTO";
+   // }
+
+    print_r($list);
 }
-if(isset ($_POST['botao']) && $_POST['botao'] == 'Voltar'){
+
+if (isset($_POST['botao']) && $_POST['botao'] == 'Voltar') {
     header('Location: index.php');
 }
 ?>

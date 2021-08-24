@@ -54,6 +54,25 @@ p {
     margin: 0px;
 }
 
+table {
+    width: 100%;
+    height: auto;
+    border: 1px solid slategray;
+    margin-top: 10px;
+    background-color: white;
+}
+
+th {
+    background-color: rgb(148, 255, 255);
+    height: 30px;
+    border: 1px solid rgb(29, 29, 29);
+}
+
+td {
+    text-align: center;
+    border: 1px solid rgb(29, 29, 29);
+}
+
 .divButton {
     display: grid;
     grid-auto-flow: row;
