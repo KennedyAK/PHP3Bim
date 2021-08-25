@@ -55,10 +55,10 @@ p {
 }
 
 table {
-    width: 100%;
+    width: 250px;
     height: auto;
     border: 1px solid slategray;
-    margin-top: 10px;
+    margin: auto;
     background-color: white;
 }
 
