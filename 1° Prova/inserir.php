@@ -48,9 +48,9 @@ if (isset($_POST['botao']) && $_POST['botao'] == 'Cadastrar') {
     $cont = 0;
     $list = []; // vetor temporario p/ armazenar os digitos
 
-    foreach ($_POST['cpDocumento'] as $id => $conteudo) {
+    foreach ($_POST['cpDocumento'] as $conteudo) {
 
-        if (strlen($conteudo) == 5) {
+        if (strlen($conteudo) == 5 && is_numeric($conteudo) == true) {
             $cont++;
 
             $list[0] = substr($conteudo, 0, 1);
@@ -86,8 +86,8 @@ if (isset($_POST['botao']) && $_POST['botao'] == 'Cadastrar') {
         $cont++;
     }
 
-    $list_prov = [];
     if ($cont == 5) {
+        $list_prov = [];
         array_push(
             $list_prov,
             [
